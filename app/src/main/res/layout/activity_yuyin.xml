@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_yuyin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zhangxuelei1506d.headline.yuyin">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_yuyin"
+        android:layout_alignParentBottom="true"
+        android:text="按住说话"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_2"
+        android:onClick="Talk"/>
+    <EditText
+        android:hint="输入内容"
+        android:id="@+id/ed_yuyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_2"/>
+
+    <TextView
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_yuyin"
+        android:layout_below="@+id/ed_yuyin"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

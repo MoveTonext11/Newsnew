@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/mainBackground"
+    android:orientation="vertical"
+    tools:context="zhangxuelei1506d.headline.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tablayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabMode="fixed" />
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/image_up"
+                    android:background="@drawable/icon_arrow_down"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <fragment
+
+            class="zhangxuelei1506d.Fragment.LiftFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            tools:layout="@layout/listfragment" />
+
+        <fragment
+            android:id="@+id/fragment2"
+            class="zhangxuelei1506d.Fragment.rightfragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            tools:layout="@layout/rightfragment" />
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "zhangxuelei1506d.headline"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile files('libs/MobCommons-2017.0801.1522.jar')
+    compile files('libs/MobTools-2017.0801.1522.jar')
+    compile files('libs/ShareSDK-Core-3.0.1.jar')
+    compile files('libs/ShareSDK-QQ-3.0.1.jar')
+    compile files('libs/ShareSDK-QZone-3.0.1.jar')
+    compile files('libs/ShareSDK-ShortMessage-3.0.1.jar')
+    compile files('libs/ShareSDK-SinaWeibo-3.0.1.jar')
+    compile files('libs/ShareSDK-TencentWeibo-3.0.1.jar')
+    compile files('libs/ShareSDK-Wechat-3.0.1.jar')
+    compile files('libs/ShareSDK-Wechat-Core-3.0.1.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-3.0.1.jar')
+    //    扫描二维码的依赖
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/Sunflower.jar')
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.alanapi.tab:alanapi-tablayout:0.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'cn.yipianfengye.android:zxing-library:2.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'org.jsoup:jsoup:1.9.2'
+    testCompile 'junit:junit:4.12'
+}
